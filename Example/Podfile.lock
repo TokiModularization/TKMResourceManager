@@ -1,0 +1,20 @@
+PODS:
+  - TKMResourceManager (0.1.0):
+    - TKMResourceManager/Core (= 0.1.0)
+  - TKMResourceManager/Core (0.1.0):
+    - TKMResourceManager/SourceMode
+  - TKMResourceManager/SourceMode (0.1.0)
+
+DEPENDENCIES:
+  - TKMResourceManager (from `../`)
+
+EXTERNAL SOURCES:
+  TKMResourceManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TKMResourceManager: 349f589f08db21732027780baedda3a26bf2beef
+
+PODFILE CHECKSUM: 01ec4b93e7027419c64d092ee72430d8cf001ee2
+
+COCOAPODS: 1.10.1

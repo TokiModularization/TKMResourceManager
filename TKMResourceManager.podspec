@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TKMResourceManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TKMResourceManager.'
+  s.summary          = 'TKM 资源包'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,15 +17,13 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'TKM 资源包'
 
-  s.homepage         = 'https://github.com/zhengxianda0512@gmail.com/TKMResourceManager'
+  s.homepage         = 'https://github.com/TokiModularization/TKMResourceManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zhengxianda0512@gmail.com' => 'xianda.zheng@email.com' }
-  s.source           = { :git => 'https://github.com/zhengxianda0512@gmail.com/TKMResourceManager.git', :tag => s.version.to_s }
+  s.author           = { 'tokihunter' => 'zhengxianda0512@gmail.com' }
+  s.source           = { :git => 'https://github.com/TokiModularization/TKMResourceManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
@@ -33,17 +31,21 @@ TODO: Add long description of the pod here.
   #Framework模式
   s.subspec 'FrameworkMode' do |fm|
     fm.vendored_frameworks = 'TKMResourceManager/TKMResourceManagerSDK/*.framework'
+    fm.resource = 'TKMResourceManager/TKMResourceManagerSDK/*.bundle'
   end
   
   #源码模式
   s.subspec 'SourceMode' do |sm|
     sm.source_files = [
-        'TKMResourceManager/Classes/**/*',
-        # 'TKMResourceManager/Interface/**/*.m'
-      ]
+      'TKMResourceManager/Classes/**/*',
+      # 'TKMResourceManager/Interface/**/*.m'
+    ]
     sm.public_header_files = [
-        'TKMResourceManager/Classes/**/*.h'
-      ]
+      'TKMResourceManager/Classes/**/*.h'
+    ]
+    sm.resource_bundles = {
+      'TKMResourceManager' => ['TKMResourceManager/Assets/**/*.png']
+    }
   end
 
   #对外接口
@@ -69,11 +71,7 @@ TODO: Add long description of the pod here.
       core.dependency 'TKMResourceManager/SourceMode'
       # core.dependency 'TKMResourceManager/Interface'
     end
-
-    # core.resource_bundles = {
-    #   'TKMResourceManager' => ['TKMResourceManager/Assets/*.png']
-    # }
-
+    
     # core.public_header_files = 'Pod/Classes/**/*.h'
     # core.frameworks = 'UIKit', 'MapKit'
     # core.dependency 'AFNetworking', '~> 2.3'

@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1F0DD1D04980AD9A59607A68 /* libPods-TKMResourceManager_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TKMResourceManager_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		239E5423B71D5D2822AB0373 /* TKMResourceManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = TKMResourceManager.podspec; path = ../TKMResourceManager.podspec; sourceTree = "<group>"; };
+		239E5423B71D5D2822AB0373 /* TKMResourceManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TKMResourceManager.podspec; path = ../TKMResourceManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		29CBBF2431FDCBE503E811D4 /* Pods-TKMResourceManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKMResourceManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-TKMResourceManager_Tests/Pods-TKMResourceManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		45F5BB84C4EEAB959E468550 /* Pods-TKMResourceManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKMResourceManager_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TKMResourceManager_Tests/Pods-TKMResourceManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* TKMResourceManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKMResourceManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,8 +62,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A7E137B72A2A946273C12F46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		AC5AA121399D661BE31A0D86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A7E137B72A2A946273C12F46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AC5AA121399D661BE31A0D86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AF8315770AEFED3E44F970D7 /* Pods-TKMResourceManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKMResourceManager_Example.release.xcconfig"; path = "Target Support Files/Pods-TKMResourceManager_Example/Pods-TKMResourceManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C2552098D62544AC6BD79122 /* libPods-TKMResourceManager_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TKMResourceManager_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65C71FF03D6F83528BC94E9 /* Pods-TKMResourceManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKMResourceManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-TKMResourceManager_Example/Pods-TKMResourceManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 				45F5BB84C4EEAB959E468550 /* Pods-TKMResourceManager_Tests.debug.xcconfig */,
 				29CBBF2431FDCBE503E811D4 /* Pods-TKMResourceManager_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				F460CB6819CC60EB1D5C9B7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -336,6 +337,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F460CB6819CC60EB1D5C9B7A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TKMResourceManager_Example/Pods-TKMResourceManager_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/TKMResourceManager/TKMResourceManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TKMResourceManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TKMResourceManager_Example/Pods-TKMResourceManager_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
